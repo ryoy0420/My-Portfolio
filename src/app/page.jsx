@@ -1,14 +1,16 @@
 "use client";
 import React from "react";
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -17,7 +19,7 @@ export default function Home() {
         brandLogo="https://ucarecdn.com/090e26a0-2323-4245-b5f7-42a350c98425/-/format/auto/"
         brandName="Ryo Yoneyama"
       />
-      <section className="relative h-[600px]">
+      <section className="relative h-screen">
         <img
           src="https://ucarecdn.com/98887636-a544-4dc6-a1cb-f6d0470802ab/-/format/auto/"
           alt="背景画像"
@@ -78,29 +80,29 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <i className="fas fa-pencil-alt text-gray-400"></i>
-                  SEOライティング
+                  <span>SEOライティング</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="fas fa-image text-gray-400"></i>
-                  画像の選定、挿入
+                  <span>画像の選定、挿入</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="fas fa-edit text-gray-400"></i>
-                  編集、校正、校閲
+                  <span>編集、校正、校閲</span>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <i className="fab fa-wordpress text-gray-400"></i>
-                  WordPress入稿
+                  <span>WordPress入稿</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="fas fa-key text-gray-400"></i>
-                  キーワード選定
+                  <span>キーワード選定</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="fas fa-palette text-gray-400"></i>
-                  アイキャッチや図解の作成
+                  <span>アイキャッチや図解の作成</span>
                 </div>
               </div>
             </div>
@@ -114,7 +116,7 @@ export default function Home() {
           className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors"
         >
           <i className="fas fa-arrow-up"></i>
-          トップへ戻る
+          <span>トップへ戻る</span>
         </button>
       </div>
 
