@@ -3,96 +3,129 @@ import React from "react";
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
-export default function About() {
-    return (
-      <div className="min-h-screen bg-white flex flex-col">
-        <Navigation
-          brandLogo="https://ucarecdn.com/090e26a0-2323-4245-b5f7-42a350c98425/-/format/auto/"
-          brandName="Ryo Yoneyama"
+export const metadata = {
+    title: 'About | Ryo Yoneyama', // ページのタイトルを適切に設定
+    description: 'About Ryo Yoneyama', // 必要に応じて description も設定
+  };
+
+export default function Home() {
+  const scrollToTop = () => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white flex flex-col">
+      <Navigation
+        brandLogo="https://ucarecdn.com/090e26a0-2323-4245-b5f7-42a350c98425/-/format/auto/"
+        brandName="Ryo Yoneyama"
+      />
+      <section className="relative h-screen">
+        <img
+          src="https://ucarecdn.com/98887636-a544-4dc6-a1cb-f6d0470802ab/-/format/auto/"
+          alt="背景画像"
+          className="absolute inset-0 w-full h-full object-cover brightness-110"
         />
-  
-        <div className="max-w-4xl mx-auto px-8 py-20 flex-grow">
-          <h1 className="text-4xl font-light mb-16">About</h1>
-  
-          <div className="bg-white rounded-xl shadow-sm p-12 mb-12">
-            <div className="flex items-center gap-8 mb-12">
-              <div>
-                <h2 className="text-2xl font-medium mb-2">米山 凌</h2>
-                <p className="text-lg text-gray-600">Ryo Yoneyama</p>
-              </div>
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute left-32 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-8 rounded-3xl max-w-2xl shadow-xl z-10">
+          <p className="text-gray-800 leading-relaxed font-medium text-2xl">
+            あなたのアイデアや想いを言葉で形にし、
+            <br />
+            読者の心に響く新しい価値を創造します。
+            <br />
+            文章があなたの可能性を描き出します。
+          </p>
+        </div>
+      </section>
+      <section className="py-20">
+        <h2 className="text-center text-3xl mb-16 font-light">Category</h2>
+        <div className="flex justify-center gap-20 px-8 max-w-6xl mx-auto">
+          <div className="text-center w-72">
+            <div className="mb-4">
+              <i className="fas fa-pencil-alt text-4xl text-gray-600"></i>
             </div>
-  
-            <div className="grid grid-cols-2 gap-12 mb-12">
-              <div>
-                <h3 className="text-lg font-medium mb-4 text-gray-700">
-                  Personal Info
-                </h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <i className="fas fa-user text-gray-400 w-5"></i>
-                    <span>21歳</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="fas fa-venus-mars text-gray-400 w-5"></i>
-                    <span>男性</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="fas fa-map-marker-alt text-gray-400 w-5"></i>
-                    <span>宮城県仙台市</span>
-                  </li>
-                </ul>
-              </div>
-  
-              <div>
-                <h3 className="text-lg font-medium mb-4 text-gray-700">Career</h3>
-                <ul className="space-y-4">
-                  <li className="flex gap-4">
-                    <div className="w-24 flex-shrink-0 text-gray-500 text-sm">
-                      現在
-                    </div>
-                    <div className="text-gray-600">東北大学 在学中</div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="w-24 flex-shrink-0 text-gray-500 text-sm">
-                      ～2024.11
-                    </div>
-                    <div className="text-gray-600">
-                      個別指導塾講師（小５～高３を担当）
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <div className="w-24 flex-shrink-0 text-gray-500 text-sm">
-                      2024.10～
-                    </div>
-                    <div className="text-gray-600">webライターとして活動開始</div>
-                  </li>
-                </ul>
-              </div>
+            <h3 className="text-xl mb-2">教育</h3>
+            <p className="text-sm text-gray-500">EDUCATION</p>
+            <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+              大学受験の経験、塾講師の経験をもとに、読者に寄り添った記事の執筆をいたします。学生向けの記事だけでなく、保護者向けの記事など幅広く対応いたします。
+            </p>
+          </div>
+          <div className="text-center w-72">
+            <div className="mb-4">
+              <i className="fas fa-flask text-4xl text-gray-600"></i>
             </div>
-  
-            <div className="mt-12 pt-12 border-t">
-              <h3 className="text-lg font-medium mb-4 text-gray-700">
-                お問い合わせ
-              </h3>
-              <p className="text-gray-600">
-                お仕事のご依頼・ご相談は下記メールアドレスまでお願いいたします。
-              </p>
-              <div className="mt-4 flex items-center gap-2 text-gray-600">
-                <i className="fas fa-envelope text-gray-400"></i>
-                <a
-                  href="mailto:biz.ryo.ai@gmail.com"
-                  className="hover:text-gray-900"
-                >
-                  biz.ryo.ai@gmail.com
-                </a>
+            <h3 className="text-xl mb-2">科学技術</h3>
+            <p className="text-sm text-gray-500">SCIENCE & TECHNOLOGY</p>
+            <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+              理系学部での学びとAIツールの活用により、最新の科学技術トレンドを分かりやすく解説いたします。専門的な内容を一般読者向けに翻訳する記事作成を得意としています。
+            </p>
+          </div>
+          <div className="text-center w-72">
+            <div className="mb-4">
+              <i className="fas fa-gamepad text-4xl text-gray-600"></i>
+            </div>
+            <h3 className="text-xl mb-2">ゲーム</h3>
+            <p className="text-sm text-gray-500">GAME</p>
+            <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+              5歳ごろからずっとゲームとともに生きてきました。RPGからアクション、シミュレーションまで幅広くプレイしていますので、経験に基づいた記事を執筆できます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
+        <h2 className="text-center text-3xl mb-16 font-light">Service</h2>
+        <div className="flex flex-wrap justify-center gap-8 px-8 max-w-5xl mx-auto">
+          <div className="bg-white p-8 rounded-lg shadow-sm w-full max-w-3xl">
+            <div className="grid grid-cols-2 gap-6 text-gray-600">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <i className="fas fa-pencil-alt text-gray-400"></i>
+                  <span>SEOライティング</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <i className="fas fa-image text-gray-400"></i>
+                  <span>画像の選定、挿入</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <i className="fas fa-edit text-gray-400"></i>
+                  <span>編集、校正、校閲</span>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <i className="fab fa-wordpress text-gray-400"></i>
+                  <span>WordPress入稿</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <i className="fas fa-key text-gray-400"></i>
+                  <span>キーワード選定</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <i className="fas fa-palette text-gray-400"></i>
+                  <span>アイキャッチや図解の作成</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-  
-        <Footer copyrightName="米山凌" />
+      </section>
+
+      <div className="text-center pb-8">
+        <button
+          onClick={scrollToTop}
+          className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors"
+        >
+          <i className="fas fa-arrow-up"></i>
+          <span>トップへ戻る</span>
+        </button>
       </div>
-    );
-  }
-  
-  
+
+      <Footer copyrightName="米山凌" />
+    </div>
+  );
+}

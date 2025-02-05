@@ -3,6 +3,11 @@ import React from "react";
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
+export const metadata = {
+  title: 'Ryo Yoneyama',
+  description: 'Portfolio site',
+};
+
 export default function Home() {
   const scrollToTop = () => {
     if (typeof window !== 'undefined') {

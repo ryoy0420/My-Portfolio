@@ -7,15 +7,15 @@ a.reference {
     text-decoration: underline;
   }
 
-/* CSS (または <style> タグ内、Tailwind CSS の @layer utilities で定義) */
-.marker-effect {
-    display: inline-block; /* 必要に応じて inline-block または block */
-    background-image: linear-gradient(to bottom, rgba(253, 230, 138, 0.8) 50%, transparent 50%); /* 薄めの黄色 (rgba) */
-    background-repeat: repeat-x; /* 横方向に繰り返し */
-    background-position: 0 0.8em; /* マーカーの位置調整 (下方向) */
-    background-size: 100% 0.3em; /* マーカーの太さ調整 (高さ) */
+.marker-line {
+    display: inline-block; /* または block; 必要に応じて調整 */
+    background-image: linear-gradient(to bottom, #d9f99d 50%, transparent 50%); /* 薄めの緑色 #d9f99d */
+    background-repeat: repeat-x;
+    background-position: 0 0.8em; /* マーカー縦位置調整 */
+    background-size: 100% 0.3em; /* マーカー太さ調整 */
   }
   
-  .marker-text {
+.marker-text {
     /* 必要に応じてテキスト自体のスタイルを調整 */
-  }
+    /* 例: color: #333; など */
+    }
