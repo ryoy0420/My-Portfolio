@@ -1,4 +1,6 @@
-function MainComponent({ brandLogo, brandName }) {
+import React from 'react';
+
+const Navigation = ({ brandLogo, brandName }) => {
     return (
       <nav className="flex justify-between items-center px-8 py-6 bg-white">
         <a
@@ -51,18 +53,5 @@ function MainComponent({ brandLogo, brandName }) {
       </nav>
     );
   }
-  
-  function StoryComponent() {
-    return (
-      <div>
-        <MainComponent />
-        <MainComponent
-          brandLogo="https://ucarecdn.com/090e26a0-2323-4245-b5f7-42a350c98425/-/format/auto/"
-          brandName="Custom Brand"
-        />
-      </div>
-    );
-  }
-  
-  
-  
+
+  export default Navigation;
