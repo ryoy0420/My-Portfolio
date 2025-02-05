@@ -1,4 +1,6 @@
 export default function Footer({ copyrightName }) {
+
+    const currentYear = new Date().getFullYear();
   
     return (
       <footer className="text-center py-8 text-gray-500 text-sm border-t">
